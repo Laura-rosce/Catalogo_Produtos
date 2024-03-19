@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="port-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de produtos</title>
+
+     <!-- Importação das funções -->
+     <script src="funções.js"></script> 
+
+    <style>
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            padding-block: 20px;
+            background-color: rgba(108, 44, 168, 0.781);
+            text-align: center;
+            align-items: center;
+            justify: center; 
+            border-radius: 5px;
+            margin: 30px;
+        }
+
+        form{
+            float:left;
+            margin: 20px;   
+        }
+
+        #pesquisa, #pesquisa1{
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            padding-inline: 10px;
+            margin-block-end: 20px;
+            margin-inline: 10px;
+            height: 25px;
+            width: 400px;  
+        }
+
+        button {
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            height: 35px;
+            background-color: rgba(161, 92, 226, 0.781);
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            border-radius: 10px;
+            margin-block-end: 20px;
+        }
+
+        #opcoes{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #produto{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            border-radius: 5px;
+            margin: 10px;
+           
+        }
+
+        #products{
+            margin-inline: 20px;
+            display: flex;
+            flex-direction: row;
+            width: 700px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Produtos</h1>
+    <form>
+        <!-- Busca-->
+        <div id="pesquisa1"> 
+            <input id="pesquisa" placeholder="Digite o nome do produto...">
+            <button onclick=""> Pesquisar</button>
+        </div>
+
+        <div id="opcoes"> 
+            <!-- Adição de Produtos-->
+            <button onclick="inicia()"> Adicionar Produto </button>
+
+            <!-- Visualizar-->
+            <button onclick=""> Visualizar Produtos</button>
+
+            <!-- Remover Produto -->
+            <button onclick=""> Remover Produto </button>
+        </div>
+    </form>
+    
+    <div id="products">
+        <div id="produto"></div> <div id="produto"></div> <div id="produto"></div>
+    </div>
+    <div id="products">
+        <div id="produto"></div> <div id="produto"></div> <div id="produto"></div>
+    </div>
+
+</body>
+</html>
