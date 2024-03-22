@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="port-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de produtos</title>
 
-     <!-- Importação das funções -->
-     <script src="funções.js"></script> 
+    <!-- Importação das funções -->
+    <script src="funções.js"></script>
 
     <style>
         h1 {
@@ -17,17 +18,18 @@
             background-color: rgba(108, 44, 168, 0.781);
             text-align: center;
             align-items: center;
-            justify: center; 
+            justify-content: center;
             border-radius: 5px;
             margin: 30px;
         }
 
-        form{
-            float:left;
-            margin: 20px;   
+        form {
+            float: left;
+            margin: 20px;
         }
 
-        #pesquisa, #pesquisa1{
+        #pesquisa,
+        #pesquisa1 {
             align-items: center;
             display: flex;
             flex-direction: row;
@@ -35,7 +37,7 @@
             margin-block-end: 20px;
             margin-inline: 10px;
             height: 25px;
-            width: 400px;  
+            width: 400px;
         }
 
         button {
@@ -48,60 +50,69 @@
             text-shadow: black 0.1em 0.1em 0.2em;
             border-radius: 10px;
             margin-block-end: 20px;
+            transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        #opcoes{
+        button:hover {
+            background-color: rgba(120, 67, 168, 0.781);
+        }
+
+        #opcoes {
             display: flex;
             flex-direction: column;
         }
 
-        #produto{
+        #produto {
             width: 200px;
             height: 200px;
             background-color: aquamarine;
             border-radius: 5px;
             margin: 10px;
-           
+
         }
 
-        #products{
+        #products {
             margin-inline: 20px;
             display: flex;
             flex-direction: row;
             width: 700px;
         }
-
-
     </style>
 </head>
+
 <body>
 
     <h1>Produtos</h1>
     <form>
         <!-- Busca-->
-        <div id="pesquisa1"> 
+        <div id="pesquisa1">
             <input id="pesquisa" placeholder="Digite o nome do produto...">
-            <button onclick=""> Pesquisar</button>
+            <button onclick="research()" type="button"> Pesquisar</button>
         </div>
 
-        <div id="opcoes"> 
+        <div id="opcoes">
             <!-- Adição de Produtos-->
-            <button onclick="inicia()"> Adicionar Produto </button>
+            <button onclick="add()" type="button"> Adicionar Produto </button>
 
             <!-- Visualizar-->
-            <button onclick=""> Visualizar Produtos</button>
+            <button onclick="exibir()" type="button"> Visualizar Produtos</button>
 
             <!-- Remover Produto -->
-            <button onclick=""> Remover Produto </button>
+            <button onclick="remover()" type="button"> Remover Produto </button>
         </div>
     </form>
-    
+
     <div id="products">
-        <div id="produto"></div> <div id="produto"></div> <div id="produto"></div>
+        <div id="produto"></div>
+        <div id="produto"></div>
+        <div id="produto"></div>
     </div>
     <div id="products">
-        <div id="produto"></div> <div id="produto"></div> <div id="produto"></div>
+        <div id="produto"></div>
+        <div id="produto"></div>
+        <div id="produto"></div>
     </div>
 
 </body>
+
 </html>
